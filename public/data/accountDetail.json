@@ -1,0 +1,50 @@
+{
+  "cardData": {
+    "cardTitle": "플러스",
+    "cardNumber": 74981289589089,
+    "totalSpending": 2200,
+    "spendignGoal": 52800,
+    "info": [
+      {
+        "day": "8",
+        "amountPerDay": 2200,
+        "items": [
+          {
+            "categoryImage": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxM[…]x8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=1000&q=60",
+            "detailTitle": "(주)이마트24 MV의왕",
+            "amonut": 2200
+          }
+        ]
+      }
+    ]
+  }
+}
+
+{
+  "bankData": {
+    "accountImage": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxM[…]x8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=1000&q=60",
+    "accountTitle": "잇딴주머니통장",
+    "accountNumber": 1010401203128,
+    "total": 544,
+    "info": [
+      {
+        "date": "23/09/17 08:54",
+        "detailTitle": "예금이자원가",
+        "price": 0,
+        "rest": 544
+      },
+      {
+        "date": "23/09/17 08:54",
+        "detailTitle": "예금이자원가",
+        "price": 0,
+        "rest": 544
+      },
+      {
+        "date": "23/09/17 08:54",
+        "detailTitle": "예금이자원가",
+        "price": 0,
+        "rest": 544
+      }
+    ]
+  }
+}

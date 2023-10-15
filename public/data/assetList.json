@@ -1,0 +1,53 @@
+{
+  "data": {
+    "members": [
+      { "userId": 2, "userName": "김판호" },
+      { "userId": 4, "userName": "김준호" },
+      { "userId": 5, "userName": "이연희" }
+    ],
+    "info": [
+      {
+        "providerName": "국민은행",
+        "providerImage": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/gookminBank_PNG.png",
+        "total": "-300.00",
+        "finances": [
+          {
+            "sum": -1100,
+            "userId": 2,
+            "financeId": 5,
+            "userProfile": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxM[…]x8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=1000&q=60",
+            "financeNumber": "006-3233-4222-44"
+          },
+          {
+            "sum": 800,
+            "userId": 2,
+            "financeId": 6,
+            "userProfile": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxM[…]x8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=1000&q=60",
+            "financeNumber": "004-4747-4466-44"
+          },
+          {
+            "sum": 0,
+            "userId": 5,
+            "financeId": 7,
+            "userProfile": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxM[…]x8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=1000&q=60",
+            "financeNumber": "010-1010-1010"
+          }
+        ]
+      },
+      {
+        "providerName": "부산은행",
+        "providerImage": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/busanBank_PNG.png",
+        "total": "9.00",
+        "finances": [
+          {
+            "sum": 9,
+            "userId": 5,
+            "financeId": 1,
+            "userProfile": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxM[…]x8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=1000&q=60",
+            "financeNumber": "002-2233-4433-33"
+          }
+        ]
+      }
+    ]
+  }
+}

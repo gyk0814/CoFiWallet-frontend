@@ -1,0 +1,149 @@
+{
+  "bank": [
+    {
+      "providerId": 2,
+      "name": "부산은행",
+      "type": "b",
+      "URL": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/busanBank_PNG.png",
+      "isAleady": null
+    },
+    {
+      "providerId": 3,
+      "name": "씨티뱅크",
+      "type": "b",
+      "URL": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/citiBank_PNG.png",
+      "isAleady": null
+    },
+    {
+      "providerId": 4,
+      "name": "대구은행",
+      "type": "b",
+      "URL": "https://rich-maker.s3.amazonaws.com/cardbanklogo/daeguBank_PNG.png",
+      "isAleady": null
+    },
+    {
+      "providerId": 5,
+      "name": "기업은행",
+      "type": "b",
+      "URL": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/giupBank_PNG.png",
+      "isAleady": null
+    },
+    {
+      "providerId": 6,
+      "name": "국민은행",
+      "type": "b",
+      "URL": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/gookminBank_PNG.png",
+      "isAleady": null
+    },
+    {
+      "providerId": 7,
+      "name": "광주은행",
+      "type": "b",
+      "URL": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/gwangjuBank_PNG.png",
+      "isAleady": null
+    },
+    {
+      "providerId": 8,
+      "name": "하나은행",
+      "type": "b",
+      "URL": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/hanaBank_PNG.png",
+      "isAleady": null
+    },
+    {
+      "providerId": 12,
+      "name": "농협은행",
+      "type": "b",
+      "URL": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/nonghyup_PNG.png",
+      "isAleady": null
+    },
+    {
+      "providerId": 13,
+      "name": "새마을금고",
+      "type": "b",
+      "URL": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/saemaeulBank_PNG.png",
+      "isAleady": null
+    },
+    {
+      "providerId": 15,
+      "name": "sc제일은행",
+      "type": "b",
+      "URL": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/scBank_PNG.png",
+      "isAleady": null
+    },
+    {
+      "providerId": 16,
+      "name": "신한은행",
+      "type": "b",
+      "URL": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/shinhanBank_PNG.png",
+      "isAleady": null
+    },
+    {
+      "providerId": 17,
+      "name": "신협은행",
+      "type": "b",
+      "URL": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/shinhyupBank_PNG.png",
+      "isAleady": null
+    },
+    {
+      "providerId": 18,
+      "name": "수협은행",
+      "type": "b",
+      "URL": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/suhyeopBank_PNG.png",
+      "isAleady": null
+    },
+    {
+      "providerId": 20,
+      "name": "우리은행",
+      "type": "b",
+      "URL": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/wooriBank_PNG.png",
+      "isAleady": null
+    }
+  ],
+  "card": [
+    {
+      "providerId": 1,
+      "name": "bc카드",
+      "type": "c",
+      "URL": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/bcCard_PNG.png",
+      "isAleady": null
+    },
+
+    {
+      "providerId": 9,
+      "name": "현대카드",
+      "type": "c",
+      "URL": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/hyundaiBank_PNG.png",
+      "isAleady": null
+    },
+    {
+      "providerId": 10,
+      "name": "롯데카드",
+      "type": "c",
+      "URL": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/lotteCard_PNG.png",
+      "isAleady": null
+    },
+    {
+      "providerId": 11,
+      "name": "master카드",
+      "type": "c",
+      "URL": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/masterCard_PNG.png",
+      "isAleady": null
+    },
+
+    {
+      "providerId": 14,
+      "name": "삼성카드",
+      "type": "c",
+      "URL": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/samsungCard_png.png",
+      "isAleady": null
+    },
+
+    {
+      "providerId": 19,
+      "name": "visa카드",
+      "type": "c",
+      "URL": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/visaCard_PNG.png",
+      "isAleady": null
+    }
+  ]
+}

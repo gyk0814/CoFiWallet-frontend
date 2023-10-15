@@ -1,0 +1,54 @@
+@import '../../styles/variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Plaster&display=swap');
+
+.introBackGround {
+  margin-top: -20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-image: url('../../../public/images/introbg.png');
+  background-size: 100% 100%;
+
+  .intro {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+
+    .twoPoints {
+      font-family: 'DM sans';
+      font-size: 40px;
+      font-weight: 600;
+      width: 20%;
+      margin-left: -15px;
+      letter-spacing: 7px;
+      margin-bottom: 2px;
+    }
+
+    .titleBox {
+      font-family: 'DM sans';
+      font-size: 40px;
+      font-weight: 600;
+      letter-spacing: -2px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+    }
+    .logoBox {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto 50px;
+      .logo {
+        font-family: 'Plaster', cursive;
+        font-size: 70px;
+      }
+    }
+  }
+}

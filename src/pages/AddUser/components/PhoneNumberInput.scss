@@ -1,0 +1,13 @@
+.phoneNumberInputContainer {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 10px;
+  padding-top: 30px;
+
+  .inputIcon {
+    position: absolute;
+    font-size: 28px;
+    top: 15px;
+    left: 20px;
+  }
+}

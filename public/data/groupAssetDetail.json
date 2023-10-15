@@ -1,0 +1,53 @@
+{
+  "members": [
+    {
+      "userId": 2,
+      "userName": "김판호"
+    },
+    {
+      "userId": 4,
+      "userName": "김준호"
+    },
+    {
+      "userId": 5,
+      "userName": "이연희"
+    }
+  ],
+  "data": [
+    {
+      "providerName": "국민은행",
+      "providerImage": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/gookminBank_PNG.png",
+      "total": "700.00",
+      "finances": [
+        {
+          "sum": -100,
+          "userId": 2,
+          "financeId": 5,
+          "userProfile": "url2",
+          "financeNumber": "006-3233-4222-44"
+        },
+        {
+          "sum": 800,
+          "userId": 2,
+          "financeId": 6,
+          "userProfile": "url2",
+          "financeNumber": "004-4747-4466-44"
+        }
+      ]
+    },
+    {
+      "providerName": "부산은행",
+      "providerImage": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/busanBank_PNG.png",
+      "total": "9.00",
+      "finances": [
+        {
+          "sum": 9,
+          "userId": 5,
+          "financeId": 1,
+          "userProfile": "url5",
+          "financeNumber": "002-2233-4433-33"
+        }
+      ]
+    }
+  ]
+}

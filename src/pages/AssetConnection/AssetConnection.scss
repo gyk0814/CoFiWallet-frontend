@@ -1,0 +1,106 @@
+@import '/src/styles/variables.scss';
+
+.assetConnection {
+  width: 90%;
+  margin: 0 auto;
+
+  header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid $grey22;
+
+    .toBack {
+      font-size: 30px;
+      cursor: pointer;
+    }
+  }
+
+  main {
+    padding: 20px 0;
+
+    .announcementMessage {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $grey22;
+
+      h5 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #444444;
+        .highlight {
+          color: $purple;
+          font-size: 17px;
+          font-weight: 900;
+        }
+      }
+    }
+
+    .categories {
+      display: flex;
+      padding: 20px 0 0;
+
+      .categoryButton {
+        border: 1px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+        background-color: #ffffff;
+        color: $grey60;
+        font-size: 16px;
+        letter-spacing: -1px;
+        cursor: pointer;
+
+        &.bold {
+          font-weight: 900;
+          border-bottom: 2px solid $purple;
+          color: #444444;
+        }
+      }
+    }
+
+    .assetList {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5%;
+      padding: 20px 0;
+
+      .assetItem {
+        position: relative;
+        width: 30%;
+        padding: 15px 0;
+        border: 1px solid $grey22;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin-top: 15px;
+        &.selected {
+          border: 1px solid $purple;
+        }
+
+        .isAlready {
+          position: absolute;
+          background-color: rgba(255, 193, 255, 0.791);
+          color: #444444;
+          font-size: 10px;
+          font-weight: 600;
+          padding: 2px 3px;
+          top: 0;
+          right: 0;
+          border-radius: 7px;
+        }
+
+        .assetImage {
+          width: 60px;
+        }
+        .assetName {
+          font-size: 13px;
+          font-weight: 900;
+        }
+      }
+    }
+  }
+}

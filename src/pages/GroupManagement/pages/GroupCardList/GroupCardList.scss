@@ -1,0 +1,153 @@
+@import '../../../../styles/variables.scss';
+
+.cardListContainer {
+  max-width: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  .cardListHeader {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .cardListTitleBox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .arrowBack {
+        position: absolute;
+        left: 0;
+        cursor: pointer;
+      }
+      .title {
+        font-size: 18px;
+      }
+    }
+
+    .groupUser {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      .groupTab {
+        border: 1px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+        background-color: #ffffff;
+        font-size: 16px;
+        font-weight: bold;
+        color: $grey60;
+        cursor: pointer;
+
+        &:hover {
+          color: $black;
+        }
+
+        &.bold {
+          font-weight: 900;
+          border-bottom: 2px solid $purple;
+          color: #444444;
+        }
+      }
+    }
+  }
+
+  .totalCardPriceContainer {
+    width: 111%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -5.5%;
+    padding: 20px 0 28%;
+    background-color: $grey22;
+
+    .totalCardPriceContentContainer {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      background-color: #ffffff;
+      padding: 20px 0 0;
+      border-radius: 10px;
+    }
+
+    .header {
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid $grey22;
+      padding-bottom: 24px;
+      margin: 0 auto;
+      font-weight: bold;
+
+      .price {
+        font-size: 20px;
+      }
+    }
+
+    .cardItemContainer {
+      display: flex;
+      flex-direction: column;
+      padding-top: 24px;
+
+      .cardItemBox {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto 20px;
+
+        .cardTitleHeader {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 20px 0;
+          font-size: 14px;
+
+          .price {
+            font-size: 18px;
+          }
+        }
+
+        .cardList {
+          position: relative;
+          width: 90%;
+          display: grid;
+          align-items: center;
+          grid-template-columns: 10fr 1fr;
+          padding-left: 13%;
+          margin: 0 auto 10%;
+          font-size: 15px;
+
+          .cardImage {
+            position: absolute;
+            width: 30px;
+          }
+
+          .cardTitleBox {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            .cardNumber {
+              font-size: 14px;
+            }
+
+            .price {
+              font-weight: bold;
+            }
+          }
+
+          .profile {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}

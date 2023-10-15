@@ -1,0 +1,157 @@
+@import '../../../../../styles/variables.scss';
+
+.floatingSpending {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .detailHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $grey22;
+
+    .headerDate {
+      font-size: 18px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .headerIcon {
+      font-size: 28px;
+      cursor: pointer;
+    }
+  }
+
+  .mainContents {
+    width: 100%;
+
+    .floatingSpendingSummary {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 20px 0;
+      color: #444444;
+      letter-spacing: -1px;
+
+      .title {
+        font-weight: 600;
+        font-size: 15px;
+      }
+
+      .amount {
+        font-weight: 900;
+        font-size: 16px;
+        letter-spacing: 0.7px;
+        span {
+          font-size: 28px;
+        }
+      }
+
+      .scheduled {
+        color: $grey60;
+        font-size: 13px;
+      }
+    }
+
+    .floatingSpendingBreakdownSection {
+      width: 100%;
+
+      .categories {
+        display: flex;
+
+        .categoryButton {
+          border: 1px solid #ffffff;
+          border-bottom: 2px solid #ffffff;
+          background-color: #ffffff;
+          color: $grey60;
+          font-size: 16px;
+          letter-spacing: -1px;
+          cursor: pointer;
+
+          &.bold {
+            font-weight: 900;
+            border-bottom: 2px solid $purple;
+            color: #444444;
+          }
+        }
+      }
+
+      .floatingSpendingBreakdown {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 111%;
+        min-height: 400px;
+        margin-left: -5.5%;
+        padding: 20px 0 28%;
+        background-color: $grey22;
+
+        .breakdownByCategory {
+          width: 90%;
+          display: flex;
+          flex-direction: column;
+          background-color: #ffffff;
+          padding: 20px 0;
+          border-radius: 10px;
+          margin-top: 20px;
+
+          .dateAndAmount {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px 10px;
+          }
+
+          .breakdownCard {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            cursor: pointer;
+            border-top: 1px solid $grey22;
+
+            .cardLeft {
+              display: flex;
+              align-items: center;
+
+              .bankImg {
+                width: 55px;
+                height: 30px;
+                margin-left: -5px;
+              }
+
+              .breakdownInfo {
+                margin-left: 3px;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                font-size: 14px;
+
+                .infoAmount {
+                  font-size: 15px;
+                  font-weight: 900;
+                }
+              }
+            }
+
+            .cardRight {
+              width: 75px;
+              padding: 5px;
+              border-radius: 5px;
+              background-color: $grey22;
+              color: grey;
+              font-size: 12px;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}

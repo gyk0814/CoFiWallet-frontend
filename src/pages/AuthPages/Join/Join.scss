@@ -1,0 +1,78 @@
+@import '../../../styles/variables.scss';
+
+.joinPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+
+  .pageTitleBox {
+    font-size: 18px;
+    font-weight: 600;
+    width: 90%;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $grey22;
+  }
+
+  .phoneNumber {
+    position: relative;
+    align-self: center;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding-bottom: 10%;
+
+    .userAuth {
+      position: absolute;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: -1px;
+      display: flex;
+      width: 90%;
+      top: 35px;
+      left: 103px;
+    }
+    .userAuthComplete {
+      color: lightgreen;
+      left: 135px;
+    }
+    .userAuthPlease {
+      color: rgba(255, 0, 0, 0.6);
+    }
+
+    .userNameInvalidMessage,
+    .passwordInvalidMessage,
+    .passwordCheckInvalidMessage {
+      position: absolute;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: -1px;
+      color: rgba(255, 0, 0, 0.6);
+      display: flex;
+      width: 90%;
+    }
+
+    .userNameInvalidMessage {
+      top: 295px;
+    }
+    .passwordInvalidMessage {
+      top: 395px;
+    }
+    .passwordCheckInvalidMessage {
+      top: 495px;
+    }
+
+    .userPhoneNumber {
+      font-size: 25px;
+    }
+
+    .title {
+      font-size: 25px;
+    }
+  }
+}

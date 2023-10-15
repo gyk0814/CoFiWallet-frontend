@@ -1,0 +1,84 @@
+{
+  "data": {
+    "members": [
+      {
+        "userId": 1,
+        "userImage": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=1000&q=60"
+      },
+      {
+        "userId": 2,
+        "userImage": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=1000&q=60"
+      },
+      {
+        "userId": 3,
+        "userImage": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=1000&q=60"
+      },
+      {
+        "userId": 4,
+        "userImage": "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=1000&q=60"
+      },
+      {
+        "userId": 5,
+        "userImage": "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=1000&q=60"
+      }
+    ],
+    "dayCount": "4",
+    "totalIncomes": {
+      "totalCounts": 2,
+      "totalAmounts": 1020
+    },
+    "totalExpenses": {
+      "totalCounts": 6,
+      "totalAmounts": -1313
+    },
+    "banks": [
+      {
+        "amount": -1100,
+        "userId": 2,
+        "financeId": 5,
+        "userImage": "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=1000&q=60",
+        "providerName": "국민은행",
+        "financeNumber": "006-3233-4222-44",
+        "providerImage": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/gookminBank_PNG.png"
+      },
+      {
+        "amount": 800,
+        "userId": 2,
+        "financeId": 6,
+        "userImage": "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=1000&q=60",
+        "providerName": "국민은행",
+        "financeNumber": "004-4747-4466-44",
+        "providerImage": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/gookminBank_PNG.png"
+      },
+      {
+        "amount": 9,
+        "userId": 5,
+        "financeId": 1,
+        "userImage": "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=1000&q=60",
+        "providerName": "부산은행",
+        "financeNumber": "002-2233-4433-33",
+        "providerImage": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/busanBank_PNG.png"
+      },
+      {
+        "amount": 0,
+        "userId": 5,
+        "financeId": 7,
+        "userImage": "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=1000&q=60",
+        "providerName": "국민은행",
+        "financeNumber": "010-1010-1010",
+        "providerImage": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/gookminBank_PNG.png"
+      }
+    ],
+    "cards": [
+      {
+        "amount": -2,
+        "userId": 4,
+        "financeId": 2,
+        "userImage": "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=1000&q=60",
+        "providerName": "bc카드",
+        "financeNumber": "001-1234-1122-11",
+        "providerImage": "https://dagh2xqzh7jgv.cloudfront.net/cardbanklogo/bcCard_PNG.png"
+      }
+    ]
+  }
+}

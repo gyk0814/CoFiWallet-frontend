@@ -1,0 +1,45 @@
+.loadingImg {
+  background: rgba(0, 0, 0, 0.533);
+  color: white;
+  text-align: center;
+  height: 80%;
+  width: 390px;
+  position: fixed;
+  top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  z-index: 99;
+
+  .loadingSvg {
+    animation: text 1s ease-in-out infinite;
+
+    .loadingCircle {
+      stroke-dasharray: 251;
+      stroke-dashoffset: 251;
+      animation: dash 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite
+        alternate-reverse;
+    }
+
+    .loadingText {
+      font-size: 18px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      animation: text 1s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes text {
+  50% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

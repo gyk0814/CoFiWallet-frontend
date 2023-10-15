@@ -1,0 +1,27 @@
+.accountListContainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding-top: 20px;
+
+  .userPofileImage {
+    width: 30px;
+    border-radius: 50%;
+  }
+
+  .accountImage {
+    position: absolute;
+    top: 24px;
+    left: 40px;
+    width: 100px;
+    height: 20px;
+    clip: rect(0, 42px, 30px, 0);
+  }
+
+  .accountName {
+    font-size: 12px;
+    font-weight: bold;
+  }
+}

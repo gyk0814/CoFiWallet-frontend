@@ -1,0 +1,125 @@
+@import '../../../../styles/variables.scss';
+
+.incomeDetail {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .detailHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $grey22;
+
+    .headerDate {
+      font-size: 18px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .headerIcon {
+      font-size: 28px;
+      cursor: pointer;
+    }
+  }
+
+  .detailMainContents {
+    width: 100%;
+
+    .totalAmountSection {
+      width: 100%;
+      padding: 20px 0;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .breakdownSection {
+      width: 111%;
+      margin-left: -5.5%;
+      padding: 20px 0 28%;
+      background-color: $grey22;
+
+      .breakdownSummary {
+        padding: 0 20px;
+      }
+
+      .cardsByDate {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .cardByDate {
+          width: 90%;
+          background-color: #ffffff;
+          margin-top: 20px;
+          border-radius: 15px;
+          padding: 20px;
+
+          .dateAndTotalAmount {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 15px;
+            font-weight: 900;
+          }
+
+          .breakdownCards {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .breakdownCard {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 20px 0;
+              cursor: pointer;
+
+              .cardLeft {
+                display: flex;
+                align-items: center;
+
+                .bankImg {
+                  width: 55px;
+                  height: 30px;
+                  margin-left: -10px;
+                }
+
+                .breakdownInfo {
+                  margin-left: 3px;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 5px;
+                  font-size: 14px;
+
+                  .infoAmount {
+                    font-size: 15px;
+                    font-weight: 900;
+                  }
+                }
+              }
+
+              .cardRight {
+                width: 75px;
+                padding: 5px;
+                border-radius: 5px;
+                background-color: $grey22;
+                color: grey;
+                font-size: 12px;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

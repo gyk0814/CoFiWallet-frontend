@@ -1,0 +1,44 @@
+{
+  "data": {
+    "cards": [
+      {
+        "id": 1,
+        "cardImage": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ7Jm92YqMxbfwC4Aez6Yc85ZODI5uaHR3KxUZnUlRtKSjBju2M",
+        "cardName": "토스뱅크카드",
+        "isChecked": "true"
+      },
+      {
+        "id": 2,
+        "cardImage": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=1000&q=60",
+        "cardName": "신한카드",
+        "isChecked": "false"
+      },
+      {
+        "id": 3,
+        "cardImage": "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=1000&q=60",
+        "cardName": "IBK기업은행카드",
+        "isChecked": "true"
+      }
+    ],
+    "accounts": [
+      {
+        "id": 1,
+        "accountImage": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ7Jm92YqMxbfwC4Aez6Yc85ZODI5uaHR3KxUZnUlRtKSjBju2M",
+        "accountName": "토스뱅크계좌",
+        "isChecked": "true"
+      },
+      {
+        "id": 2,
+        "accountImage": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=1000&q=60",
+        "accountName": "신한계좌",
+        "isChecked": "false"
+      },
+      {
+        "id": 3,
+        "accountImage": "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=1000&q=60",
+        "accountName": "IBK기업은행계좌",
+        "isChecked": "true"
+      }
+    ]
+  }
+}

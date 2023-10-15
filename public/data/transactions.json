@@ -1,0 +1,57 @@
+{
+  "data": {
+    "depositsAmount": "12,000",
+    "expensesAmount": "22,000",
+    "monthlyExpenseAmounts": "1,000",
+    "variableExpenseAmounts": "1,000",
+    "amountsBycategories": [
+      {
+        "id": "주거",
+        "label": "주거",
+        "value": 1100000,
+        "color": "hsl(286, 70%, 50%)"
+      },
+      {
+        "id": "기타",
+        "label": "기타",
+        "value": 100000,
+        "color": "hsl(68, 70%, 50%)"
+      },
+      {
+        "id": "통신",
+        "label": "통신",
+        "value": 180000,
+        "color": "hsl(9, 70%, 50%)"
+      },
+      {
+        "id": "식사",
+        "label": "식사",
+        "value": 632000,
+        "color": "hsl(335, 70%, 50%)"
+      },
+      {
+        "id": "카페",
+        "label": "카페",
+        "value": 121000,
+        "color": "hsl(221, 70%, 50%)"
+      }
+    ],
+    "expensesAmountByThreeCategories": [
+      {
+        "id": "주거",
+        "label": "주거",
+        "value": "1,100,000"
+      },
+      {
+        "id": "이체",
+        "label": "이체",
+        "value": "682,000"
+      },
+      {
+        "id": "기타",
+        "label": "기타",
+        "value": "100,000"
+      }
+    ]
+  }
+}

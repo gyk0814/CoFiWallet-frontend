@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #a49696;
+}
+
+#root {
+  position: relative;
+  width: 390px;
+  max-height: 80vh;
+  min-height: 80vh;
+  border-radius: 20px;
+  padding: 20px 0 0;
+  background-color: #fff;
+  overflow-y: scroll;
+  display: flex;
+}
+
+#root::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}

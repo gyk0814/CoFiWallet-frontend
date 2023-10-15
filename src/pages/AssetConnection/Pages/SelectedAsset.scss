@@ -1,0 +1,101 @@
+@import '/src/styles/variables.scss';
+
+.selectedAsset {
+  width: 90%;
+  margin: 0 auto;
+
+  header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid $grey22;
+
+    .toBack {
+      font-size: 30px;
+      cursor: pointer;
+    }
+  }
+
+  .announceMessage {
+    font-size: 19px;
+    letter-spacing: -1px;
+    font-weight: 500;
+    padding: 20px 0;
+    border-bottom: 1px solid $grey22;
+
+    .highlight {
+      color: $purple;
+      font-weight: 900;
+    }
+  }
+
+  .assetListSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 20px;
+
+    .assetBox {
+      width: 100%;
+      border: 1px solid $grey22;
+      border-radius: 10px;
+
+      .assetTitle {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+        border-bottom: 1px solid $grey22;
+
+        .bankImage {
+          width: 50px;
+          margin-right: 10px;
+        }
+
+        h3 {
+          columns: #444444;
+          font-weight: 900;
+          font-size: 17px;
+        }
+      }
+
+      .assetList {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        padding: 20px;
+
+        .assetCard {
+          width: 100%;
+          padding: 10px 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-bottom: 1px solid $grey22;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          .assetInfo {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+
+            .assetName {
+              color: #444444;
+              font-size: 16px;
+            }
+
+            .assetNumber {
+              color: $grey60;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

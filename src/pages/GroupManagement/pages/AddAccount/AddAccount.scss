@@ -1,0 +1,120 @@
+@import '../../../../styles/variables.scss';
+
+.addAccountContainer {
+  max-width: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 0 auto;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .closeBtnBox {
+      display: flex;
+      justify-content: flex-end;
+
+      .closeBtn {
+        text-align: right;
+        cursor: pointer;
+      }
+    }
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      h2 {
+        color: blue;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .allCheckBtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid $grey80;
+    padding: 5%;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .detailContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+
+    .detailHeader {
+      border-bottom: 1px solid $grey22;
+      padding-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      p {
+        font-weight: bold;
+        font-size: 14px;
+      }
+    }
+
+    .detailList {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding-top: 20px;
+      margin-bottom: 50px;
+
+      .detailItem {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .detailTitleBox {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          .detailImage {
+            width: 35px;
+          }
+
+          .detailTitle {
+            font-size: 14px;
+          }
+        }
+
+        .checkIcon {
+          color: $grey80;
+          border-radius: 50%;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: $blue;
+            color: #fff;
+            cursor: pointer;
+          }
+
+          &.checked {
+            background-color: $blue;
+            color: #fff;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
