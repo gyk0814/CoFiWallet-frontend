@@ -43,20 +43,20 @@ const PhoneNumberInput = ({ closeModal }) => {
     {
       onSuccess: data => {
         const { message } = data;
-        if (message === 'invitation sent and added member') {
-          alert('공동관리 설정이 완료되었습니다.');
+        if (message === 'Invitation sent and member added') {
+          alert('Shared management setup is complete.');
           closeModal();
           navigate('/group');
         } else if (message === 'Exceeds maximum member count: 5') {
-          alert('최대 회원 수를 초과');
+          alert('Exceeds the maximum member count: 5');
         } else if (message === 'Phone number not found') {
-          alert('존재하지 않는 번호입니다.');
-        } else if (message === 'same group') {
-          alert('이미 등록된 그룹입니다.');
+          alert('Phone number not found.');
+        } else if (message === 'Same group') {
+          alert('This group is already registered.');
         }
       },
       onError: () => {
-        alert('에러가 발생했습니다');
+        alert('An error occurred.');
       },
     },
   );
@@ -65,21 +65,22 @@ const PhoneNumberInput = ({ closeModal }) => {
     if (phoneNumberIsValid) {
       addUserMutation.mutate(userPhoneNumber);
     } else {
-      alert('유효하지 않은 전화번호입니다');
+      alert('Invalid phone number.');
     }
   };
+
   return (
     <div className="phoneNumberInputContainer">
       <DefaultInput
         icon={<CiUser className="inputIcon" />}
         type="text"
-        placeholder="전화번호"
+        placeholder="Phone number"
         id="phoneNumber"
         value={userPhoneNumber}
         onChange={handleInputChange}
       />
       <DefaultButton
-        text="다음"
+        text="Next"
         onClick={handlePostPhoneNumber}
         disabled={!phoneNumberIsValid}
       />

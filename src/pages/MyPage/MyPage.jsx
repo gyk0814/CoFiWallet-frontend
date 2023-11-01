@@ -33,21 +33,21 @@ const MyPage = () => {
           className="arrowBack"
           onClick={() => navigate(-1)}
         />
-        <h1 className="title">마이페이지</h1>
+        <h1 className="title">My Page</h1>
       </div>
       <div className="tabBox">
         <button
           className={`changeBtn ${isProfileBold ? 'bold' : ''}`}
           onClick={handleProfileClick}
         >
-          프로필 이미지 변경
+          Change Profile Image
         </button>
         <RxDividerVertical size={35} className="divider" />
         <button
           className={`changeBtn ${isPasswordBold ? 'bold' : ''}`}
           onClick={handlePasswordClick}
         >
-          비밀번호 변경
+          Change Password
         </button>
       </div>
       <div className="myPageContentBox">

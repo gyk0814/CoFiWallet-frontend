@@ -26,6 +26,21 @@ const Main = () => {
     expensesAmountByThreeCategories: [],
   });
 
+  const months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
+
   const {
     depositsAmount,
     expensesAmount,
@@ -56,7 +71,7 @@ const Main = () => {
   };
 
   const { data, error, refetch } = useFinancialData(month);
-  console.log(data);
+  console.log(data, 'error: ', error);
 
   useEffect(() => {
     if (data) {
@@ -94,20 +109,23 @@ const Main = () => {
               <img
                 src={profileImage}
                 className="userProfileImage isNotNull"
-                alt="프로필"
+                alt="Profile"
+                onClick={() => {
+                  navigate('/my-page');
+                }}
               />
             )}
-            {userName}님{' '}
+            Hi, {userName}{' '}
             <span className="logoutButton" onClick={handleLogout}>
-              로그아웃
+              Sign Out
             </span>
           </div>
           <BiBell className="bell" />
         </header>
         <main className="mainContents noData">
           <div className="recommendationMessage">
-            <h3>계좌/카드 연결하고</h3>
-            <h3>자산관리 시작하기</h3>
+            <h3>Connect Accounts and Cards,</h3>
+            <h3>Start Managing Your Assets</h3>
           </div>
           <AiOutlineCaretDown className="arrowDown" />
           <div
@@ -116,7 +134,7 @@ const Main = () => {
               navigate('/asset-connection');
             }}
           >
-            <p className="buttonTitle">계좌 · 카드 내역 불러오기</p>
+            <p className="buttonTitle">Import Accounts and Cards Data</p>
             <AiOutlinePlus />
           </div>
         </main>
@@ -138,12 +156,15 @@ const Main = () => {
             <img
               src={profileImage}
               className="userProfileImage isNotNull"
-              alt="프로필"
+              alt="Profile"
+              onClick={() => {
+                navigate('/my-page');
+              }}
             />
           )}
-          {userName}님
+          Hi, {userName}
           <span className="logoutButton" onClick={handleLogout}>
-            로그아웃
+            Sign Out
           </span>
         </div>
         <BiBell className="bell" />
@@ -152,12 +173,12 @@ const Main = () => {
       <main className="mainContents">
         <div className=" monthDiv">
           <div className="monthDivLeft">
-            <h1 className="monthTitle">{month}월</h1>
+            <h1 className="monthTitle"> {months[month - 1]}</h1>
             <BiCalendar className="calendarIcon" onClick={handleOpenCalendar} />
           </div>
           <div className="dataUpdateButton" onClick={handleDataUpdate}>
             <p className="updatedAt" />
-            <h5 className="updateTitle">업데이트</h5>
+            <h5 className="updateTitle">Update</h5>
             <BiRefresh className="refreshIcon" />
           </div>
         </div>
@@ -168,9 +189,9 @@ const Main = () => {
             navigate('/main/my-report');
           }}
         >
-          <h3 className="reportTitle">리포트</h3>
+          <h3 className="reportTitle">Reports</h3>
           <p className="reportMessage">
-            예산을 설정해보세요
+            Try setting a budget
             <span>
               <BiBarChartAlt className="chartIcon" />
             </span>
@@ -184,9 +205,9 @@ const Main = () => {
               navigate('/main/income');
             }}
           >
-            <h2 className="transactionCategory">총 수입</h2>
+            <h2 className="transactionCategory">Total Income</h2>
             <h3 className="transactionAmount">
-              {formatPrice(Number(depositsAmount))} 원
+              {formatPrice(Number(depositsAmount))} KRW
             </h3>
           </div>
           <div
@@ -195,9 +216,9 @@ const Main = () => {
               navigate('/main/spending');
             }}
           >
-            <h2 className="transactionCategory">총 지출</h2>
+            <h2 className="transactionCategory">Total Expense</h2>
             <h3 className="transactionAmount">
-              {formatPrice(Number(expensesAmount) * -1)} 원
+              {formatPrice(Number(expensesAmount) * -1)} KRW
             </h3>
           </div>
         </div>
@@ -208,21 +229,21 @@ const Main = () => {
             navigate('/main/regular-spending');
           }}
         >
-          <h3 className="myTitle">정기지출</h3>
+          <h3 className="myTitle">Regular Spending</h3>
           <ul className="myList">
             <li className="listItem">
-              <span className="listTitle">지출 예정</span>
+              <span className="listTitle">Upcoming</span>
               <span className="amount">
+                ₩{' '}
                 {Number(expectedExpenseAmounts) > 0
                   ? formatPrice(Number(expectedExpenseAmounts) * -1)
                   : 0}{' '}
-                원
               </span>
             </li>
             <li className="listItem">
-              <span className="listTitle">지출 완료</span>
+              <span className="listTitle">Completed</span>
               <span className="amount">
-                {formatPrice(Number(monthlyExpenseAmounts) * -1)} 원
+                ₩ {formatPrice(Number(monthlyExpenseAmounts) * -1)}
               </span>
             </li>
           </ul>
@@ -233,16 +254,16 @@ const Main = () => {
             navigate('/main/floating-spending');
           }}
         >
-          <h3 className="myTitle">변동지출</h3>
+          <h3 className="myTitle">Variable Spending</h3>
           <ul className="myList">
             <li className="listItem">
-              <span className="listTitle">지출예산</span>
-              <span className="amount">1,000,000 원</span>
+              <span className="listTitle">Expense Budget</span>
+              <span className="amount">₩ 1,000,000</span>
             </li>
             <li className="listItem">
-              <span className="listTitle">지출</span>
+              <span className="listTitle">Expenses</span>
               <span className="amount">
-                {formatPrice(Number(variableExpenseAmounts) * -1)} 원
+                ₩ {formatPrice(Number(variableExpenseAmounts) * -1)}
               </span>
             </li>
           </ul>
@@ -253,21 +274,21 @@ const Main = () => {
             navigate('/main/installment-spending');
           }}
         >
-          <h3 className="myTitle">할부지출</h3>
+          <h3 className="myTitle">Installment Spending</h3>
           <ul className="myList">
             <li className="listItem">
-              <span className="listTitle">지출 예정</span>
-              <span className="amount">0 원</span>
+              <span className="listTitle">Upcoming </span>
+              <span className="amount">₩ 350,000</span>
             </li>
             <li className="listItem">
-              <span className="listTitle">지출 완료</span>
-              <span className="amount">0 원</span>
+              <span className="listTitle">Completed</span>
+              <span className="amount">₩ 0</span>
             </li>
           </ul>
         </div>
 
         <div className="donutChartDiv">
-          <h3 className="chartTitle">카테고리별 지출</h3>
+          <h3 className="chartTitle">Expenses By Category</h3>
           <div className="donutChart">
             <MainPie data={amountsBycategories} />
           </div>
@@ -276,7 +297,7 @@ const Main = () => {
               i < 3 && (
                 <div className="chartCategory" key={id}>
                   <p>{label}</p>
-                  <p>{formatPrice(Number(value))}원</p>
+                  <p>₩ {formatPrice(Number(value))}</p>
                 </div>
               ),
           )}
@@ -288,7 +309,7 @@ const Main = () => {
             navigate('/asset-connection');
           }}
         >
-          <p className="buttonTitle">계좌 · 카드 내역 불러오기</p>
+          <p className="buttonTitle">Connect Accounts and Cards Data</p>
           <AiOutlinePlus className="assetConnectionPlusIcon" />
         </div>
       </main>

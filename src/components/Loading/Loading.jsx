@@ -15,7 +15,7 @@ const Loading = () => {
           className="loadingCircle"
         />
         <text fill="#fff" x="18" y="120" className="loadingText">
-          로딩중..
+          Loading..
         </text>
       </svg>
     </div>

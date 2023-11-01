@@ -42,12 +42,12 @@ const ChangePassword = () => {
       );
 
       if (res.data.message === 'changePassword') {
-        alert('비밀번호가 변경되었습니다.');
+        alert('Password has been changed.');
         navigate('/main');
       }
 
       if (res.data.message === 'INVALID_PASSWORD') {
-        alert('비밀번호를 확인해주세요');
+        alert('Please check your password.');
       }
     } catch (err) {
       console.log(`ERROR : ${err}`);
@@ -69,8 +69,8 @@ const ChangePassword = () => {
   return (
     <>
       <p className="noticePasswordValidation">
-        알파벳 대/소문자, 숫자, 특수문자를 조합하여 <br /> 10자 이상이어야
-        합니다.
+        Should be a combination of uppercase and lowercase letters, numbers, and
+        special characters, and at least 10 characters long.
       </p>
       <div className="changePasswordBox">
         <form
@@ -82,7 +82,7 @@ const ChangePassword = () => {
             <MdOutlineVpnKey size={20} className="passwordIcon" />
             <DefaultInput
               type="password"
-              placeholder="기존 비밀번호"
+              placeholder="Current Password"
               id="existingPassword"
               value={existingPassword}
             />
@@ -91,7 +91,7 @@ const ChangePassword = () => {
             <MdOutlineVpnKey size={20} className="passwordIcon" />
             <DefaultInput
               type="password"
-              placeholder="새 비밀번호"
+              placeholder="New Password"
               id="newPassword"
               value={newPassword}
             />
@@ -100,15 +100,15 @@ const ChangePassword = () => {
             <MdOutlineVpnKey size={20} className="passwordIcon" />
             <DefaultInput
               type="password"
-              placeholder="새 비밀번호 확인"
+              placeholder="Confirm New Password"
               id="newPasswordCheck"
               value={newPasswordCheck}
             />
           </div>
           {newPasswordCheck !== '' && !isSameNewPassword && (
-            <p className="passwordCheck">비밀번호와 일치하지 않습니다.</p>
+            <p className="passwordCheck">Passwords do not match.</p>
           )}
-          <DefaultButton text="저장" disabled={!isValid} />
+          <DefaultButton text="Save" disabled={!isValid} />
         </form>
       </div>
     </>

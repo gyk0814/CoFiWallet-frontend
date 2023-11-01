@@ -12,7 +12,7 @@ const GroupNoAccount = () => {
         <img
           className="profileImage"
           src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ7Jm92YqMxbfwC4Aez6Yc85ZODI5uaHR3KxUZnUlRtKSjBju2M"
-          alt="프로필"
+          alt="Profile"
           onClick={() => navigate('/group/group-user')}
         />
       </div>
@@ -20,11 +20,11 @@ const GroupNoAccount = () => {
         <BsCreditCard size={160} />
         <div className="contentBox">
           <p className="subContent">
-            공동으로 관리할 <br />
-            <span className="blue">계좌/카드</span>를 공유하세요
+            Select and Share <br />
+            <span className="blue">accounts/cards</span> to manage jointly
           </p>
         </div>
-        <DefaultButton text="공유하기" onClick={() => {}} />
+        <DefaultButton text="Share" onClick={() => {}} />
       </div>
     </div>
   );

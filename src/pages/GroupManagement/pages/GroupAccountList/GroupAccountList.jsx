@@ -13,7 +13,7 @@ const GroupAccountList = () => {
   const memberIdParam = searchParams.get('memberId');
   const memberId = parseInt(memberIdParam);
 
-  const [activeTab, setActiveTab] = useState('공동');
+  const [activeTab, setActiveTab] = useState('Shared');
   const navigate = useNavigate();
 
   const { isLoading, data: accountList } = useGetGroupAssets(assets, memberId);
@@ -21,8 +21,8 @@ const GroupAccountList = () => {
   const handleTabClick = (tabName, tabUserId) => {
     const newSearchParams = new URLSearchParams(searchParams);
 
-    if (tabName === '공동') {
-      setActiveTab('공동');
+    if (tabName === 'Shared') {
+      setActiveTab('Shared');
       newSearchParams.set('type', assets);
       newSearchParams.delete('memberId');
     } else {
@@ -49,14 +49,14 @@ const GroupAccountList = () => {
             className="arrowBack"
             onClick={() => navigate('/group')}
           />
-          <h1 className="title">계좌</h1>
+          <h1 className="title">Accounts</h1>
         </div>
         <div className="groupUser">
           <button
-            className={`groupTab ${activeTab === '공동' ? 'bold' : ''}`}
-            onClick={() => handleTabClick('공동')}
+            className={`groupTab ${activeTab === 'Shared' ? 'bold' : ''}`}
+            onClick={() => handleTabClick('Shared')}
           >
-            공동
+            Shared
           </button>
           {accountList?.members.map(tab => (
             <button
@@ -72,9 +72,9 @@ const GroupAccountList = () => {
       <div className="totalAccountPriceContainer">
         <div className="totalAccountPriceContentContainer">
           <div className="header">
-            <p>잔고 합계</p>
+            <p>Total Balance</p>
             <p>
-              <b className="price">{formatPrice(totalRest)}</b>원
+              <b className="price">{formatPrice(totalRest)}</b>KRW
             </p>
           </div>
           <div className="accountItemContainer">
@@ -86,25 +86,25 @@ const GroupAccountList = () => {
                     <b className="price">
                       {formatPrice(Number(account.total))}
                     </b>
-                    원
+                    KRW
                   </p>
                 </div>
                 {account.finances.map(finance => (
                   <div className="accountList" key={i}>
                     <img
                       src={account.providerImage}
-                      alt="계좌"
+                      alt="Accounts"
                       className="accountImage"
                     />
                     <div className="accountTitleBox">
                       <p className="accountNumber">{finance.financeNumber}</p>
                       <span className="price">
-                        {formatPrice(finance.sum)}원
+                        {formatPrice(finance.sum)}KRW
                       </span>
                     </div>
                     <img
                       src={finance.userProfile}
-                      alt="프로필"
+                      alt="Profile"
                       className="profile"
                     />
                   </div>

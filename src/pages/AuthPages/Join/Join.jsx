@@ -67,33 +67,37 @@ const Join = () => {
 
   return (
     <div className="joinPage">
-      <header className="pageTitleBox">회원가입</header>
+      <header className="pageTitleBox">Sign Up</header>
       <div className="phoneNumber">
         {userAuth ? (
-          <p className="userAuth userAuthComplete">본인인증 완료.</p>
+          <p className="userAuth userAuthComplete">
+            Identity verification complete.
+          </p>
         ) : (
-          <p className="userAuth userAuthPlease">본인인증을 진행해주세요.</p>
+          <p className="userAuth userAuthPlease">
+            Please proceed with identity verification.
+          </p>
         )}
         {!userNameIsValid && (
           <p className="userNameInvalidMessage">
-            한국어 이름만 입력 가능합니다. (2글자 이상)
+            Only Korean names are allowed. (Minimum 2 characters)
           </p>
         )}
         {!passwordIsValid && (
           <p className="passwordInvalidMessage">
-            알파벳 대/소문자, 숫자, 특수문자를 조합하여 10자 이상이어야 합니다.
+            Should contain a combination of uppercase/lowercase letters,
+            numbers, and special characters, with a minimum length of 10
+            characters.
           </p>
         )}
         {!passwordCheckIsValid && (
-          <p className="passwordCheckInvalidMessage">
-            비밀번호와 일치하지 않습니다.
-          </p>
+          <p className="passwordCheckInvalidMessage">Passwords do not match.</p>
         )}
 
         <h1 className="userPhoneNumber">{userPhoneNumber}</h1>
-        <DefaultButton text="본인인증" onClick={personalAuth} />
+        <DefaultButton text="Verify Identity" onClick={personalAuth} />
 
-        <h1 className="title">정보를 입력해주세요.</h1>
+        <h1 className="title">Please enter your information.</h1>
         {JOIN_USER_INPUTS.map(inputItem => (
           <DefaultInput
             key={inputItem.id}
@@ -114,7 +118,7 @@ const Join = () => {
           />
         ))}
         <DefaultButton
-          text="다음"
+          text="Next"
           onClick={handlePostJoinUserInfo}
           disabled={!allUserInfoIsValid}
         />

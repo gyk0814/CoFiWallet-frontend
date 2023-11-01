@@ -15,7 +15,7 @@ const InviteWithPhoneNumber = ({ closeModal }) => {
       {!isOpenPhoneNumberInput ? (
         <div className="inviteContainer" onClick={handleClickToSwitch}>
           <BsPhone size={50} className="phoneIcon" />
-          <h1 className="inviteMethod">핸드폰 번호</h1>
+          <h1 className="inviteMethod">Phone Number</h1>
         </div>
       ) : (
         <PhoneNumberInput closeModal={closeModal} />

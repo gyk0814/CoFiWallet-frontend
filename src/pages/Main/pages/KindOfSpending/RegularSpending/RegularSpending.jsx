@@ -45,18 +45,18 @@ const RegularSpending = () => {
           }}
         />
         <div className="headerDate" onClick={handleOpenCalendar}>
-          2023년 {month}월 <GrFormDown />
+          {month}, 2023 <GrFormDown />
         </div>
         <BiPlus className="headerIcon" />
       </header>
 
       <main className="mainContents">
         <section className="regularSpendingSummary">
-          <p className="title">총 정기지출</p>
+          <p className="title">Total Regular Expenses</p>
           <h3 className="amount">
-            <span>600,000</span>원
+            <span>600,000</span>KRW
           </h3>
-          <p className="scheduled">지출 예정 0원</p>
+          <p className="scheduled">Scheduled Expenses 0KRW</p>
         </section>
 
         <section className="regularSpendingBreakdownSection">
@@ -65,13 +65,13 @@ const RegularSpending = () => {
               className={`categoryButton ${dateClick ? 'bold' : ''}`}
               onClick={handleDateClick}
             >
-              일자
+              By Date
             </button>
             <button
               className={`categoryButton ${categoryClick ? 'bold' : ''}`}
               onClick={handleCategoryClick}
             >
-              카테고리
+              By Category
             </button>
           </div>
           <div className="regularSpendingBreakdown">
@@ -91,7 +91,7 @@ const RegularSpending = () => {
                       />
                       <div className="breakdownInfo">
                         <p className="infoTitle">{breakdown.title}</p>
-                        <h4 className="infoAmount">{breakdown.amount}원</h4>
+                        <h4 className="infoAmount">{breakdown.amount}KRW</h4>
                       </div>
                     </div>
                     <div className="cardRight">{breakdown.info}</div>

@@ -15,7 +15,6 @@ const ChangeProfileImage = () => {
   const [profileImageUrl, setProfileImageUrl] = useState(
     localStorage.getItem('profileImage') || '',
   );
-
   const onChangeImageInput = async e => {
     e.preventDefault();
     const { files } = e.target;
@@ -46,7 +45,7 @@ const ChangeProfileImage = () => {
       const imageUrl = response.data.profileImage;
       setProfileImageUrl(imageUrl);
       localStorage.setItem('profileImage', imageUrl);
-      alert('프로필이 변경되었습니다.');
+      alert('Profile has been changed.');
     } catch (err) {
       console.log(`ERROR: ${err}`);
     }
@@ -55,15 +54,19 @@ const ChangeProfileImage = () => {
   return (
     <>
       <div className="avatar">
-        {profileImageUrl ? (
-          <img src={profileImageUrl} alt="프로필" className="profileImage" />
+        {profileImageUrl !== 'null' ? (
+          <img
+            src={profileImageUrl}
+            alt="ProfileImage"
+            className="profileImage"
+          />
         ) : (
           <AiOutlineUser className="profileImage" />
         )}
 
         <span className="editBox">
           <MdModeEditOutline size={30} className="editBtn" />
-          <p>변경</p>
+          <p>Change</p>
           <input
             type="file"
             name="file"
@@ -74,7 +77,7 @@ const ChangeProfileImage = () => {
         </span>
       </div>
 
-      <DefaultButton text="저장" onClick={onSubmitChange} />
+      <DefaultButton text="Save" onClick={onSubmitChange} />
     </>
   );
 };

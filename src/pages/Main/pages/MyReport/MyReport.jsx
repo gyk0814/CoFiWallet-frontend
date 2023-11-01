@@ -13,62 +13,62 @@ const MyReport = () => {
   const [selectedDate, setSelectedDate] = useState(formatDate);
   const [monthData, setMonthData] = useState([
     {
-      month: '1월',
+      month: 'Jan',
       income: 90,
       expense: 20,
     },
     {
-      month: '2월',
+      month: 'Feb',
       income: 90,
       expense: 70,
     },
     {
-      month: '3월',
+      month: 'Mar',
       income: 10,
       expense: 90,
     },
     {
-      month: '4월',
+      month: 'Apr',
       income: 200,
       expense: 100,
     },
     {
-      month: '5월',
+      month: 'May',
       income: 30,
       expense: 90,
     },
     {
-      month: '6월',
+      month: 'Jun',
       income: 20,
       expense: 110,
     },
     {
-      month: '7월',
+      month: 'Jul',
       income: 100,
       expense: 60,
     },
     {
-      month: '8월',
+      month: 'Aug',
       income: 380,
       expense: 10,
     },
     {
-      month: '9월',
+      month: 'Sep',
       income: 200,
       expense: 30,
     },
     {
-      month: '10월',
+      month: 'Oct',
       income: 90,
       expense: 100,
     },
     {
-      month: '11월',
+      month: 'Nov',
       income: 490,
       expense: 130,
     },
     {
-      month: '12월',
+      month: 'Dec',
       income: 280,
       expense: 160,
     },
@@ -166,10 +166,13 @@ const MyReport = () => {
         <main className="reportMain">
           <section className="reportSummary">
             <div className="summaryMessageBox">
-              <h1 className="summaryMessage">박동철님, 지난달보다</h1>
               <h1 className="summaryMessage">
-                <span className="messageHighlight">654,488원 덜 지출</span>
-                했습니다.
+                Hi Young, Compared to last month,
+              </h1>
+              <h1 className="summaryMessage">
+                <span className="messageHighlight">
+                  you spent 654,488 KRW less.
+                </span>
               </h1>
             </div>
             <div className="comparison">
@@ -177,35 +180,35 @@ const MyReport = () => {
               <p className="percentText">{percentBar}%</p>
             </div>
             <div className="lastMonthSpending">
-              <h3>지난달 지출</h3>
-              <h3>743,948원</h3>
+              <h3>Last Month's Expenses</h3>
+              <h3>743,948KRW</h3>
             </div>
           </section>
 
           <section className="spendingReport">
             <div className="totalSpending">
-              <h4 className="totalSpendingTitle">지출</h4>
-              <h4 className="totalSpendingAmount">89,460원</h4>
+              <h4 className="totalSpendingTitle">Expenses</h4>
+              <h4 className="totalSpendingAmount">89,460KRW</h4>
             </div>
             <div className="kindOfSpending">
-              <p className="titleByKind">정기지출</p>
-              <h5 className="amountByKind">0원</h5>
+              <p className="titleByKind">Regular Expenses</p>
+              <h5 className="amountByKind">0KRW</h5>
             </div>
             <div className="kindOfSpending">
-              <p className="titleByKind">할부지출</p>
-              <h5 className="amountByKind">0원</h5>
+              <p className="titleByKind">Installment Spending</p>
+              <h5 className="amountByKind">0 KRW</h5>
             </div>
             <div className="kindOfSpending">
-              <p className="titleByKind">변동지출</p>
-              <h5 className="amountByKind">89,460원</h5>
+              <p className="titleByKind">Variable Spending</p>
+              <h5 className="amountByKind">89,460 KRW</h5>
             </div>
-            <button className="budgetingButton">지출 예산 설정하기</button>
+            <button className="budgetingButton">Set Expense Budget</button>
           </section>
 
           <section className="spendingTrends">
             <div className="spendingTitle">
-              <h4>지출추이</h4>
-              <p>(단위:만원)</p>
+              <h4>Expense Trend</h4>
+              <p>(Unit: 10K KRW)</p>
             </div>
             <div className="spendingGraph">
               <Chart monthData={expenseData} />
@@ -215,7 +218,7 @@ const MyReport = () => {
                 className="rangeOfDateButton"
                 onClick={() => handleExpenseArrowClick('prev')}
               />
-              {`2023년 ${currentExpenseVisibleData[0]?.month} - ${
+              {`Year 2023 ${currentExpenseVisibleData[0]?.month} - ${
                 currentExpenseVisibleData[currentExpenseVisibleData.length - 1]
                   ?.month
               }`}
@@ -228,25 +231,27 @@ const MyReport = () => {
 
           <section className="incomeReport">
             <div className="incomeInfo">
-              <h3>수입</h3>
-              <h3>14,718원</h3>
+              <h3>Incomes</h3>
+              <h3>14,718KRW</h3>
             </div>
             <div className="incomeInfo">
-              <h3>수입-지출</h3>
-              <h3>-74,742원</h3>
+              <h3>Income-Expense</h3>
+              <h3>-74,742KRW</h3>
             </div>
           </section>
 
           <section className="incomeGraph">
             <div className="incomeGraphSummary">
-              <h1 className="summaryMessage">{`${
+              <h1 className="summaryMessage">{`From ${
                 currentGapVisibleData[0]?.month
-              }부터 ${
+              } to ${
                 currentGapVisibleData[currentGapVisibleData.length - 1]?.month
-              }까지`}</h1>
+              }`}</h1>
               <h1 className="summaryMessage">
-                <span className="messageHighlight">남은 돈은 -31만원</span>
-                입니다.
+                <span className="messageHighlight">
+                  Your remaining balance{' '}
+                </span>
+                is -310k KRW.
               </h1>
             </div>
             <div className="spendingGraph">
@@ -257,7 +262,7 @@ const MyReport = () => {
                 className="rangeOfDateButton"
                 onClick={() => handleGapArrowClick('prev')}
               />
-              {`2023년 ${currentGapVisibleData[0]?.month} - ${
+              {`Year 2023 ${currentGapVisibleData[0]?.month} - ${
                 currentGapVisibleData[currentGapVisibleData.length - 1]?.month
               }`}
               <GrFormNext

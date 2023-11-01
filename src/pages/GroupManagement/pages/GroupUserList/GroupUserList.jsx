@@ -23,7 +23,7 @@ const GroupUserList = () => {
           className="arrowBack"
           onClick={() => navigate(-1)}
         />
-        <h1 className="title">공동관리 설정</h1>
+        <h1 className="title">Group Management Settings</h1>
       </div>
       <div className="groupUserListContentContainer">
         {userList.map(el => (

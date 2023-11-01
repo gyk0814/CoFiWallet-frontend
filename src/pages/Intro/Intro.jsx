@@ -11,15 +11,15 @@ const Intro = () => {
       <div className="intro">
         <h2 className="twoPoints">. .</h2>
         <div className="titleBox">
-          <h2>똑똑한</h2>
-          <h2>자산 공동관리</h2>
+          <h2>Smart Collaborative</h2>
+          <h2>Asset Management</h2>
         </div>
         <div className="logoBox">
-          <h1 className="logo">RICH</h1>
-          <h1 className="logo">Maker</h1>
+          <h1 className="logo">CoFi</h1>
+          <h1 className="logo">Wallet</h1>
         </div>
         <DefaultButton
-          text="시작하기"
+          text="Get Started"
           onClick={() => {
             navigate('/login');
           }}

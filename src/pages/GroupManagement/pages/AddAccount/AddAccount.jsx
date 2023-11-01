@@ -112,13 +112,13 @@ const AddAccount = () => {
           />
         </div>
         <div className="title">
-          <h2>내 공유 데이터 설정</h2>
-          <p>원치 않으시면 선택하지 않으셔도 됩니다.</p>
+          <h2>Manage My Shared Assets</h2>
+          <p>You can choose not to select if you wish.</p>
         </div>
       </div>
 
       <button className="allCheckBtn">
-        <label htmlFor="checkAll">전체 선택</label>
+        <label htmlFor="checkAll">Select All</label>
         <input
           type="checkbox"
           id="checkAll"
@@ -135,7 +135,7 @@ const AddAccount = () => {
           cards.map(card => (
             <>
               <div className="detailHeader">
-                <p>카드</p>
+                <p>Cards</p>
                 <input
                   type="checkbox"
                   onChange={handleCardsAllCheck}
@@ -147,7 +147,7 @@ const AddAccount = () => {
                   <div className="detailTitleBox">
                     <img
                       src={card.cardImage}
-                      alt="카드"
+                      alt="Card"
                       className="detailImage"
                     />
                     <p className="detailTitle">{card.cardName}</p>
@@ -163,7 +163,7 @@ const AddAccount = () => {
           ))}
 
         <div className="detailHeader">
-          <p>은행</p>
+          <p>Banks</p>
           <input
             type="checkbox"
             onChange={handleAccountsAllCheck}
@@ -176,7 +176,7 @@ const AddAccount = () => {
               <div className="detailTitleBox">
                 <img
                   src={account.providerImage}
-                  alt="은행"
+                  alt="Bank"
                   className="detailImage"
                 />
                 <p className="detailTitle">{account.providerName}</p>
@@ -189,7 +189,7 @@ const AddAccount = () => {
             </li>
           ))}
         </ul>
-        <DefaultButton text="공유하기" onClick={handleShare} />
+        <DefaultButton text="Share" onClick={handleShare} />
       </div>
     </div>
   );

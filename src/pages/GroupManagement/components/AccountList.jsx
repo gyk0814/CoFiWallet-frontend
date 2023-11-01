@@ -7,9 +7,9 @@ const AccountList = ({ profileImage, accountImage, accountName }) => {
       <img
         className="userPofileImage"
         src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ7Jm92YqMxbfwC4Aez6Yc85ZODI5uaHR3KxUZnUlRtKSjBju2M"
-        alt="프로필"
+        alt="Profile"
       />
-      <img className="accountImage" src={accountImage} alt="은행" />
+      <img className="accountImage" src={accountImage} alt="Bank" />
       <p className="accountName">{accountName}</p>
     </div>
   );

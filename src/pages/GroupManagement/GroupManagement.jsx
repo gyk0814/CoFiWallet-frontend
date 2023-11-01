@@ -54,7 +54,7 @@ const GroupManagement = () => {
                     userImage ||
                     'https://picpac.kr/common/img/default_profile.png'
                   }
-                  alt="프로필"
+                  alt="Profile"
                   onClick={() => navigate('/group/group-user')}
                 />
               );
@@ -70,39 +70,41 @@ const GroupManagement = () => {
         <div className="totalPrice" onClick={() => navigate('/group/use')}>
           <div className="detailBox">
             <div className="detail">
-              <h1 className="title">수입</h1>
+              <h1 className="title">Income</h1>
               <span className="count">
-                {formatPrice(totalIncomes?.totalCounts)}건
-              </span>
-            </div>
-            <p className="price">{formatPrice(totalIncomes?.totalAmounts)}원</p>
-          </div>
-          <div className="detailBox">
-            <div className="detail">
-              <h1 className="title">지출</h1>
-              <span className="count">
-                {formatPrice(totalExpenses?.totalCounts)}건
+                {formatPrice(totalIncomes?.totalCounts)} items
               </span>
             </div>
             <p className="price">
-              {formatPrice(totalExpenses?.totalAmounts)}원
+              {formatPrice(totalIncomes?.totalAmounts)} KRW
+            </p>
+          </div>
+          <div className="detailBox">
+            <div className="detail">
+              <h1 className="title">Expense</h1>
+              <span className="count">
+                {formatPrice(totalExpenses?.totalCounts)} items
+              </span>
+            </div>
+            <p className="price">
+              {formatPrice(totalExpenses?.totalAmounts)} KRW
             </p>
           </div>
         </div>
         <ContainerBox
-          title="계좌"
-          count={`${groupAccountsCount}건`}
+          title="Accounts"
+          count={`${groupAccountsCount} items`}
           assets={banks}
           assetType="b"
         />
         <ContainerBox
-          title="카드"
-          count={`${groupCardsCount}건`}
+          title="Cards"
+          count={`${groupCardsCount} items`}
           assets={cards}
           assetType="c"
         />
         <div className="addUserBox">
-          <h1 className="title">구성원 추가하기</h1>
+          <h1 className="title">Add Members</h1>
           <GrFormAdd
             size={30}
             className="addUserButton"

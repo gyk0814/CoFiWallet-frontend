@@ -23,13 +23,13 @@ const Password = () => {
 
   return (
     <div className="passwordPage">
-      <header className="pageTitleBox">로그인</header>
+      <header className="pageTitleBox">Log In</header>
       <div className="password">
-        <h1 className="title">비밀번호를 입력해주세요.</h1>
+        <h1 className="title">Please enter your password.</h1>
         <DefaultInput
           icon={<CiLock className="inputIcon" />}
           type="password"
-          placeholder="비밀번호"
+          placeholder="Password"
           id="password"
           value={password}
           onChange={e => {
@@ -37,7 +37,7 @@ const Password = () => {
           }}
         />
         <DefaultButton
-          text="로그인"
+          text="Log In"
           onClick={handlePostPassword}
           disabled={!passwordIsValid}
         />

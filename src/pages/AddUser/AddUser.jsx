@@ -21,14 +21,14 @@ const AddUser = () => {
       <GrGroup size={160} />
       <div className="contentBox">
         <p className="content">
-          <span>공동관리</span>로 관리하세요
+          <span>Manage together</span>
         </p>
         <p className="subContent">
-          가족, 친구들과 <br />
-          계좌/카드를 공유할 수 있어요
+          With family and friends, <br />
+          you can share accounts and cards.
         </p>
       </div>
-      <DefaultButton text="공동관리 시작하기" onClick={handleOpenModal} />
+      <DefaultButton text="Start Shared Management" onClick={handleOpenModal} />
       {isOpenStartGroupModal && (
         <>
           <InviteModal

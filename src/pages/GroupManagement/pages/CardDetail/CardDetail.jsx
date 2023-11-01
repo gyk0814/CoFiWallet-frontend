@@ -62,7 +62,7 @@ const CardDetail = () => {
               onClick={() => navigate(-1)}
             />
             <h1 className="title" onClick={handleOpenCalendar}>
-              <p>2023년 {monthFormatted}월</p>
+              <p>Year 2023 - {monthFormatted}</p>
               <IoIosArrowDown size={18} />
             </h1>
           </div>
@@ -73,7 +73,7 @@ const CardDetail = () => {
                 {spendingData.commonInfo.financeNumber}
               </p>
               <p className="price">
-                {formatPrice(Number(spendingData.totalAmount))}원
+                {formatPrice(Number(spendingData.totalAmount))}KRW
               </p>
             </div>
             <div className="comparison">
@@ -81,9 +81,9 @@ const CardDetail = () => {
               <p className="percentText">{percentBar}%</p>
             </div>
             <div className="priceGoal">
-              <p>지출목표</p>
+              <p>Spending Goals</p>
               <p className="price">
-                {formatPrice(Number(spendingData.totalAmount))}원 &gt;
+                {formatPrice(Number(spendingData.totalAmount))}KRW &gt;
               </p>
             </div>
           </div>
@@ -93,18 +93,18 @@ const CardDetail = () => {
           <div className="cardUsingList" key={index}>
             <div className="header">
               <p>{day}</p>
-              <p>{formatPrice(Number(spendingData?.transactions.amount))}원</p>
+              <p>{formatPrice(Number(spendingData?.transactions.amount))}KRW</p>
             </div>
             {groupedData[day].map((transaction, i) => (
               <div className="content" key={i}>
                 <img
                   src={spendingData.commonInfo.categoryImage}
-                  alt="카테고리"
+                  alt="Categories"
                   className="category"
                 />
                 <div className="detailContent">
                   <p className="title">{transaction.note}</p>
-                  <p>{formatPrice(Number(transaction.amount))}원</p>
+                  <p>{formatPrice(Number(transaction.amount))}KRW</p>
                 </div>
               </div>
             ))}

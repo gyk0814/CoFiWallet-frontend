@@ -79,7 +79,7 @@ const GroupTotalPriceDetail = () => {
                 </div>
                 <img
                   src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ7Jm92YqMxbfwC4Aez6Yc85ZODI5uaHR3KxUZnUlRtKSjBju2M"
-                  alt="프로필"
+                  alt="Profile"
                   className="profile"
                 />
               </div>
@@ -115,7 +115,7 @@ const GroupTotalPriceDetail = () => {
                     </div>
                     <img
                       src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ7Jm92YqMxbfwC4Aez6Yc85ZODI5uaHR3KxUZnUlRtKSjBju2M"
-                      alt="프로필"
+                      alt="Profile"
                       className="profile"
                     />
                   </div>
@@ -143,7 +143,7 @@ const GroupTotalPriceDetail = () => {
                     </div>
                     <img
                       src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ7Jm92YqMxbfwC4Aez6Yc85ZODI5uaHR3KxUZnUlRtKSjBju2M"
-                      alt="프로필"
+                      alt="Profile"
                       className="profile"
                     />
                   </div>
@@ -171,7 +171,7 @@ const GroupTotalPriceDetail = () => {
                     </div>
                     <img
                       src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ7Jm92YqMxbfwC4Aez6Yc85ZODI5uaHR3KxUZnUlRtKSjBju2M"
-                      alt="프로필"
+                      alt="Profile"
                       className="profile"
                     />
                   </div>

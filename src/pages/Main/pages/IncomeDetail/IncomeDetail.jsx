@@ -122,6 +122,21 @@ const IncomeDetail = () => {
   //   console.log(error);
   // }
 
+  const months = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec',
+  ];
+
   return (
     <>
       <div className="incomeDetail">
@@ -133,19 +148,19 @@ const IncomeDetail = () => {
             }}
           />
           <div className="headerDate" onClick={handleOpenCalendar}>
-            2023년 {month}월 <GrFormDown />
+            {months[month - 1]}, 2023 <GrFormDown />
           </div>
           <BiPlus className="headerIcon" />
         </header>
 
         <main className="detailMainContents">
           <section className="totalAmountSection">
-            <p className="sectionTitle">총 수입</p>
-            <h3 className="totalAmount">3,814,718 원</h3>
+            <p className="sectionTitle">Total Income</p>
+            <h3 className="totalAmount">4,154,718 KRW</h3>
           </section>
           <section className="breakdownSection">
             <p className="breakdownSummary">
-              총 <span className="summaryNumber">3</span> 건
+              Total <span className="summaryNumber">7</span> itmes
             </p>
             {/* 아래 카드들은 컴포넌트로 분리 후 날짜별.map 안에 카드들.map 돌릴 수 있을 듯 */}
             <div className="cardsByDate">
@@ -177,88 +192,148 @@ const IncomeDetail = () => {
               ))} */}
               <div className="cardByDate">
                 <div className="dateAndTotalAmount">
-                  <div className="cardDate">9일</div>
-                  <div className="cardTotalAmount">3,220,000원</div>
+                  <div className="cardDate">13th</div>
+                  <div className="cardTotalAmount">3,220,000 KRW</div>
                 </div>
                 <div className="breakdownCards">
                   <div className="breakdownCard">
                     <div className="cardLeft">
                       <img
                         className="bankImg"
-                        src="https://wp-blog.toss.im/wp-content/uploads/2022/09/logo-toss-blue-1024x576.png"
-                        alt="토스뱅크"
+                        src="https://fairfaxcityconnected.com/wp-content/uploads/2020/06/Bank-of-America-logo.jpg"
+                        alt="Bank of America"
                       />
                       <div className="breakdownInfo">
-                        <p className="infoTitle">이인재</p>
-                        <h4 className="infoAmount">220,000원</h4>
+                        <p className="infoTitle">VENMO</p>
+                        <h4 className="infoAmount">₩ 220,000</h4>
                       </div>
                     </div>
-                    <div className="cardRight">토스뱅크 계좌</div>
+                    <div className="cardRight">
+                      BoA <br />
+                      004-4747
+                    </div>
                   </div>
                   <div className="breakdownCard">
                     <div className="cardLeft">
                       <img
                         className="bankImg"
-                        src="https://wp-blog.toss.im/wp-content/uploads/2022/09/logo-toss-blue-1024x576.png"
-                        alt="토스뱅크"
+                        src="https://1000logos.net/wp-content/uploads/2021/05/Chase-logo.png"
+                        alt="Chase Bank"
                       />
                       <div className="breakdownInfo">
-                        <p className="infoTitle">(주)그레이스풀레인</p>
-                        <h4 className="infoAmount">3,000,000원</h4>
+                        <p className="infoTitle">Graceful Rain Co.</p>
+                        <h4 className="infoAmount">₩ 3,000,000</h4>
                       </div>
                     </div>
-                    <div className="cardRight">토스뱅크 계좌</div>
+                    <div className="cardRight">
+                      Chase <br /> 006-3233
+                    </div>
                   </div>
                 </div>
               </div>
 
               <div className="cardByDate">
                 <div className="dateAndTotalAmount">
-                  <div className="cardDate">1일</div>
-                  <div className="cardTotalAmount">814,718원</div>
+                  <div className="cardDate">12th</div>
+                  <div className="cardTotalAmount">434,718 KRW</div>
                 </div>
                 <div className="breakdownCards">
                   <div className="breakdownCard">
                     <div className="cardLeft">
                       <img
                         className="bankImg"
-                        src="https://wp-blog.toss.im/wp-content/uploads/2022/09/logo-toss-blue-1024x576.png"
-                        alt="토스뱅크"
+                        src="https://1000logos.net/wp-content/uploads/2021/05/Chase-logo.png"
+                        alt="Chase Bank"
                       />
                       <div className="breakdownInfo">
-                        <p className="infoTitle">김만규</p>
-                        <h4 className="infoAmount">314,718원</h4>
+                        <p className="infoTitle">MOUNT HOLYOKE CO. PAYROLL</p>
+                        <h4 className="infoAmount">₩ 314,718</h4>
                       </div>
                     </div>
-                    <div className="cardRight">토스뱅크 계좌</div>
+                    <div className="cardRight">
+                      {' '}
+                      Chase <br /> 006-3233
+                    </div>
                   </div>
                   <div className="breakdownCard">
                     <div className="cardLeft">
                       <img
                         className="bankImg"
-                        src="https://wp-blog.toss.im/wp-content/uploads/2022/09/logo-toss-blue-1024x576.png"
-                        alt="토스뱅크"
+                        src="https://fairfaxcityconnected.com/wp-content/uploads/2020/06/Bank-of-America-logo.jpg"
+                        alt="Bank of America"
                       />
                       <div className="breakdownInfo">
-                        <p className="infoTitle">김민재</p>
-                        <h4 className="infoAmount">300,000원</h4>
+                        <p className="infoTitle">Mark</p>
+                        <h4 className="infoAmount">₩ 40,000</h4>
                       </div>
                     </div>
-                    <div className="cardRight">토스뱅크 계좌</div>
+                    <div className="cardRight">
+                      {' '}
+                      BoA <br />
+                      004-4747
+                    </div>
                   </div>
                   <div className="breakdownCard">
                     <div className="cardLeft">
                       <img
                         className="bankImg"
-                        src="https://wp-blog.toss.im/wp-content/uploads/2022/09/logo-toss-blue-1024x576.png"
-                        alt="토스뱅크"
+                        src="https://fairfaxcityconnected.com/wp-content/uploads/2020/06/Bank-of-America-logo.jpg"
+                        alt="Bank of America"
                       />
                       <div className="breakdownInfo">
-                        <p className="infoTitle">최지준</p>
-                        <h4 className="infoAmount">200,000원</h4>
+                        <p className="infoTitle">ZARA</p>
+                        <h4 className="infoAmount">₩ 80,000</h4>
                       </div>
                     </div>
-                    <div className="cardRight">토스뱅크 계좌</div>
+                    <div className="cardRight">
+                      {' '}
+                      BoA <br />
+                      004-4747
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="cardByDate">
+                <div className="dateAndTotalAmount">
+                  <div className="cardDate">1st</div>
+                  <div className="cardTotalAmount">500,000 KRW</div>
+                </div>
+                <div className="breakdownCards">
+                  <div className="breakdownCard">
+                    <div className="cardLeft">
+                      <img
+                        className="bankImg"
+                        src="https://fairfaxcityconnected.com/wp-content/uploads/2020/06/Bank-of-America-logo.jpg"
+                        alt="Bank of America"
+                      />
+                      <div className="breakdownInfo">
+                        <p className="infoTitle">CHECK #998</p>
+                        <h4 className="infoAmount">₩ 300,000</h4>
+                      </div>
+                    </div>
+                    <div className="cardRight">
+                      {' '}
+                      BoA <br />
+                      004-4747
+                    </div>
+                  </div>
+                  <div className="breakdownCard">
+                    <div className="cardLeft">
+                      <img
+                        className="bankImg"
+                        src="https://1000logos.net/wp-content/uploads/2021/05/Chase-logo.png"
+                        alt="Chase Bank"
+                      />
+                      <div className="breakdownInfo">
+                        <p className="infoTitle">YouTube</p>
+                        <h4 className="infoAmount">₩ 200,000</h4>
+                      </div>
+                    </div>
+                    <div className="cardRight">
+                      {' '}
+                      Chase <br /> 006-3233
+                    </div>
                   </div>
                 </div>
               </div>

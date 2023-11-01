@@ -36,19 +36,19 @@ const PhoneNumber = () => {
 
   return (
     <div className="phoneNumberPage">
-      <header className="pageTitleBox">시작하기</header>
+      <header className="pageTitleBox">Get Started</header>
       <div className="phoneNumber">
-        <h1 className="title">전화번호를 입력해주세요.</h1>
+        <h1 className="title">Please enter your phone number.</h1>
         <DefaultInput
           icon={<CiUser className="inputIcon" />}
           type="text"
-          placeholder="전화번호"
+          placeholder="Phone Number"
           id="phoneNumber"
           value={userPhoneNumber}
           onChange={handleInputChange}
         />
         <DefaultButton
-          text="다음"
+          text="Next"
           onClick={handlePostPhoneNumber}
           disabled={!phoneNumberIsValid}
         />

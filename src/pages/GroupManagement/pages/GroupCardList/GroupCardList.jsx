@@ -13,7 +13,7 @@ const GroupCardList = () => {
   const memberIdParam = searchParams.get('memberId');
   const memberId = parseInt(memberIdParam);
 
-  const [activeTab, setActiveTab] = useState('공동');
+  const [activeTab, setActiveTab] = useState('Shared');
   const navigate = useNavigate();
 
   const { isLoading, data: cardList } = useGetGroupAssets(assets, memberId);
@@ -26,7 +26,7 @@ const GroupCardList = () => {
       newSearchParams.set('type', assets);
       newSearchParams.set('memberId', tabUserId);
     } else {
-      setActiveTab('공동');
+      setActiveTab('Shared');
       newSearchParams.set('type', assets);
       newSearchParams.delete('memberId');
     }
@@ -49,14 +49,14 @@ const GroupCardList = () => {
             className="arrowBack"
             onClick={() => navigate('/group')}
           />
-          <h1 className="title">카드</h1>
+          <h1 className="title">Card</h1>
         </div>
         <div className="groupUser">
           <button
-            className={`groupTab ${activeTab === '공동' ? 'bold' : ''}`}
-            onClick={() => handleTabClick('공동')}
+            className={`groupTab ${activeTab === 'Shared' ? 'bold' : ''}`}
+            onClick={() => handleTabClick('Shared')}
           >
-            공동
+            Shared
           </button>
           {cardList.members.map(tab => (
             <button
@@ -72,9 +72,9 @@ const GroupCardList = () => {
       <div className="totalCardPriceContainer">
         <div className="totalCardPriceContentContainer">
           <div className="header">
-            <p>월 카드 이용료 합계</p>
+            <p>Monthly Card Payments Total</p>
             <p>
-              <b className="price">{formatPrice(totalSpending)}</b>원
+              <b className="price">{formatPrice(totalSpending)}</b>KRW
             </p>
           </div>
           <div className="cardItemContainer">
@@ -83,7 +83,8 @@ const GroupCardList = () => {
                 <div className="cardTitleHeader">
                   <p>{card.providerName}</p>
                   <p>
-                    <b className="price">{formatPrice(Number(card.total))}</b>원
+                    <b className="price">{formatPrice(Number(card.total))}</b>
+                    KRW
                   </p>
                 </div>
 
@@ -91,18 +92,18 @@ const GroupCardList = () => {
                   <div className="cardList" key={i}>
                     <img
                       src={card.providerImage}
-                      alt="카드"
+                      alt="Cards"
                       className="cardImage"
                     />
                     <div className="cardTitleBox">
                       <p className="cardNumber">{finance.financeNumber}</p>
                       <span className="price">
-                        {formatPrice(finance.sum)}원
+                        {formatPrice(finance.sum)}KRW
                       </span>
                     </div>
                     <img
                       src={finance.userProfile}
-                      alt="프로필"
+                      alt="Profile"
                       className="profile"
                     />
                   </div>

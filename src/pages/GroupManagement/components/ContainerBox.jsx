@@ -50,20 +50,20 @@ const ContainerBox = ({ title, count, assets, assetType }) => {
                 asset.userImage ||
                 'https://picpac.kr/common/img/default_profile.png'
               }
-              alt="프로필"
+              alt="Profile"
             />
             {assetType === 'account' ? (
               <img
                 className="accountImage"
                 src={asset.providerImage}
-                alt="은행"
+                alt="Bank"
               />
             ) : (
-              <img className="cardImage" src={asset.providerImage} alt="카드" />
+              <img className="cardImage" src={asset.providerImage} alt="Card" />
             )}
             <div className="accountItemBox">
               <p className="accountName">{asset.providerName}</p>
-              <p className="price">{formatPrice(asset.amount)}원</p>
+              <p className="price">{formatPrice(asset.amount)}KRW</p>
             </div>
           </div>
         ))}
@@ -78,7 +78,7 @@ const ContainerBox = ({ title, count, assets, assetType }) => {
               )
             }
           >
-            더보기
+            Show more
           </button>
         )}
       </div>

@@ -41,22 +41,22 @@ export const JOIN_USER_INPUTS = [
 /** Buttons objects in "Array" for Navigation bar */
 export const NAVIGATION_BUTTONS = [
   {
-    name: '가계부',
+    name: 'Ledger',
     path: '/main',
     icon: <LiaHomeSolid className="navIcons" />,
   },
   {
-    name: '자산',
+    name: 'Assets',
     path: '/main',
     icon: <LiaCoinsSolid className="navIcons" />,
   },
   {
-    name: '공동관리',
+    name: 'Group',
     path: '/group',
     icon: <LiaUserFriendsSolid className="navIcons" />,
   },
   {
-    name: '더보기',
+    name: 'More',
     path: '/main',
     icon: <LiaEllipsisHSolid className="navIcons" />,
   },
@@ -64,15 +64,16 @@ export const NAVIGATION_BUTTONS = [
 
 /** Calendar data for Calendar Modal */
 export const CALENDAR_MODAL_LIST = [
-  { title: '2023년 9월' },
-  { title: '2023년 8월' },
-  { title: '2023년 7월' },
-  { title: '2023년 6월' },
-  { title: '2023년 5월' },
-  { title: '2023년 4월' },
-  { title: '2023년 3월' },
-  { title: '2023년 2월' },
-  { title: '2023년 1월' },
+  { title: 'Oct 2023' },
+  { title: 'Sep 2023' },
+  { title: 'Aug 2023' },
+  { title: 'Jul 2023' },
+  { title: 'Jun 2023' },
+  { title: 'May 2023' },
+  { title: 'Apr 2023' },
+  { title: 'Mar 2023' },
+  { title: 'Feb 2023' },
+  { title: 'Jan 2023' },
 ];
 
 /** FormData headers */
@@ -83,44 +84,44 @@ export const config = {
 /** 데이터 GET 대비하여 만든 임시 데이터로 이후 제거할 것입니다. */
 export const TEMPORARY_DATA = [
   {
-    date: '11일',
-    totalAmount: '24,000원',
+    date: 'day: 11',
+    totalAmount: '24,000KRW',
     breakdown: [
       {
-        category: '카페/간식',
-        title: '이디야',
+        category: 'cafe',
+        title: 'Starbucks',
         amount: '5,000',
-        info: '토스뱅크카드',
+        info: 'Toss Card',
       },
       {
-        category: '외식',
-        title: '애슐리',
+        category: 'Dining',
+        title: 'Apple bees',
         amount: '19,000',
-        info: '현대카드',
+        info: 'Hyundai Card',
       },
     ],
   },
   {
-    date: '9일',
-    totalAmount: '16,450원',
+    date: 'day: 9',
+    totalAmount: '16,450KRW',
     breakdown: [
       {
-        category: '기타',
-        title: '다트쉐어링',
+        category: 'Others',
+        title: 'Apple Music',
         amount: '1,650',
-        info: '토스뱅크카드',
+        info: 'Toss Card',
       },
       {
-        category: '이체',
-        title: '이인재',
+        category: 'Transfer',
+        title: 'Mark',
         amount: '9,900',
-        info: '토스뱅크계좌',
+        info: 'Toss Bank',
       },
       {
-        category: '이체',
-        title: '김만규',
+        category: 'Transfer',
+        title: 'Grace',
         amount: '4,900',
-        info: '토스뱅크계좌',
+        info: 'Toss Bank',
       },
     ],
   },
@@ -132,10 +133,23 @@ export const GROUP_CARD_TABS = [
   { id: 2, label: '이연희' },
   { id: 3, label: '김판호' },
 ];
-
+const months = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
+];
+const d = new Date();
 /** 날짜 포맷 (2023년 9월) */
-export const formatDate =
-  new Date().getFullYear() + '년 ' + (new Date().getMonth() + 1) + '월';
+export const formatDate = months[d.getMonth()] + ', ' + d.getFullYear();
 
 /** 가격 3자리 끊기 */
 export const formatPrice = price => price.toLocaleString();

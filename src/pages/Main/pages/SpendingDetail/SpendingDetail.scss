@@ -87,10 +87,24 @@
                 display: flex;
                 align-items: center;
 
-                .bankImg {
-                  width: 55px;
-                  height: 30px;
-                  margin-left: -10px;
+                // .bankImg {
+                //   width: 55px;
+                //   height: 30px;
+                //   margin-left: -10px;
+                // }
+                .categoryImgBox {
+                  width: 51px;
+                  height: 46px;
+                  margin: 0 5px 0 -10px;
+                  background-color: rgb(217, 189, 227);
+                  border-radius: 60%;
+
+                  .categoryImg {
+                    width: 38px;
+                    height: 30px;
+                    margin: 8px 7px;
+                    filter: drop-shadow(1px 1px white);
+                  }
                 }
 
                 .breakdownInfo {

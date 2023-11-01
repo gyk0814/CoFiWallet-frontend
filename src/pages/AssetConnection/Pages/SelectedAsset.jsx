@@ -52,7 +52,7 @@ const SelectedAsset = () => {
       </header>
 
       <p className="announceMessage">
-        <span className="highlight">불러올 자산을 선택</span>해주세요
+        Please select <span className="highlight">the assets to connect</span>
       </p>
 
       <main className="assetListSection">
@@ -90,7 +90,7 @@ const SelectedAsset = () => {
         )}
       </main>
 
-      <DefaultButton text="저장하기" onClick={handlePostSelectedList} />
+      <DefaultButton text="Save" onClick={handlePostSelectedList} />
     </div>
   );
 };

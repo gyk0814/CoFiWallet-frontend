@@ -46,9 +46,9 @@ const AssetConnection = () => {
       setMyBanks(data.bank);
       setMyCards(data.card);
     } else if (isError) {
-      console.error(`데이터 통신 실패 : (${error.message})`);
+      console.error(`Data communication failed: (${error.message})`);
     } else {
-      console.log('통신 재시도 중');
+      console.log('Retrying communication');
     }
   }, [data, isError]);
 
@@ -76,9 +76,9 @@ const AssetConnection = () => {
 
       <main className="">
         <section className="announcementMessage">
-          <h5>연결할 기관을</h5>
+          <h5>Select institutions to connect</h5>
           <h5>
-            <span className="highlight">카테고리별로 선택</span>해주세요
+            <span className="highlight">by category</span>
           </h5>
         </section>
 
@@ -87,13 +87,13 @@ const AssetConnection = () => {
             className={`categoryButton ${cardClick ? 'bold' : ''}`}
             onClick={handleCardClick}
           >
-            카드
+            Cards
           </button>
           <button
             className={`categoryButton ${bankClick ? 'bold' : ''}`}
             onClick={handlebankClick}
           >
-            은행
+            Banks
           </button>
         </section>
 
@@ -114,7 +114,7 @@ const AssetConnection = () => {
           />
         )}
 
-        <DefaultButton text="저장" onClick={handleSave} />
+        <DefaultButton text="Save" onClick={handleSave} />
       </main>
     </div>
   );
