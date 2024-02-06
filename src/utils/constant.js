@@ -7,14 +7,14 @@ import {
 import { CiUser, CiLock } from 'react-icons/ci';
 
 /** Phone number pattern for validation */
-export const phoneNumberPattern = /^[0-9]{11}$/;
+export const phoneNumberPattern = /^[0-9]{10}$/;
 
 /** password pattern for validation */
 export const passwordPattern =
   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{10,}/;
 
-/** korean pattern for validation */
-export const koreanPattern = /^[가-힣]{2,}$/;
+/** english pattern for validation */
+export const englishPattern = /^[a-zA-Z]+(\s[a-zA-Z]+)?$/;
 
 /** Input objects in "Array" for Join user info Inputs */
 export const JOIN_USER_INPUTS = [
@@ -22,19 +22,19 @@ export const JOIN_USER_INPUTS = [
     id: 'userName',
     icon: <CiUser className="inputIcon" />,
     type: 'text',
-    placeholder: '이름',
+    placeholder: 'Name',
   },
   {
     id: 'password',
     icon: <CiLock className="inputIcon" />,
     type: 'password',
-    placeholder: '비밀번호',
+    placeholder: 'Password',
   },
   {
     id: 'passwordCheck',
     icon: <CiLock className="inputIcon" />,
     type: 'password',
-    placeholder: '비밀번호 확인',
+    placeholder: 'Confirm Password',
   },
 ];
 

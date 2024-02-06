@@ -4,7 +4,7 @@ import useAuthMutation from '../../../hooks/api/user/useAuthMutation';
 import useSignupMutation from '../../../hooks/api/user/useSignupMutation';
 import {
   JOIN_USER_INPUTS,
-  koreanPattern,
+  englishPattern,
   passwordPattern,
 } from '../../../utils/constant';
 import DefaultInput from '../../../components/DefaultInput/DefaultInput';
@@ -34,7 +34,7 @@ const Join = () => {
   };
 
   const [userAuth, setUserAuth] = useState(false);
-  const userNameIsValid = koreanPattern.test(userInfo.userName);
+  const userNameIsValid = englishPattern.test(userInfo.userName);
   const passwordIsValid = passwordPattern.test(userInfo.password);
   const passwordCheckIsValid = userInfo.password === passwordCheck;
   const allUserInfoIsValid =
@@ -80,7 +80,7 @@ const Join = () => {
         )}
         {!userNameIsValid && (
           <p className="userNameInvalidMessage">
-            Only Korean names are allowed. (Minimum 2 characters)
+            Only English alphabets are allowed.
           </p>
         )}
         {!passwordIsValid && (
@@ -97,12 +97,13 @@ const Join = () => {
         <h1 className="userPhoneNumber">{userPhoneNumber}</h1>
         <DefaultButton text="Verify Identity" onClick={personalAuth} />
 
-        <h1 className="title">Please enter your information.</h1>
+        <h1 className="title">Please enter your information</h1>
         {JOIN_USER_INPUTS.map(inputItem => (
           <DefaultInput
             key={inputItem.id}
             icon={inputItem.icon}
             type={inputItem.type}
+            autocomplete="off"
             placeholder={inputItem.placeholder}
             id={inputItem.id}
             value={
